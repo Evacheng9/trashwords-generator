@@ -1,0 +1,61 @@
+<div class="container py-5">
+
+  <div class="row">
+    <div class="col-sm-12 text-center mb-3">
+      <h2>你想對誰說幹話？</h2>
+    </div>
+  </div>
+
+  <form method="POST" action="/">
+    <div class="row justify-content-around" id="data-panel">
+      <div class="card col m-3 border">
+        <img class="card-img-top mt-2"
+          src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" height="240"
+          alt="engineer">
+        <div class="card-body row justify-content-center">
+          <div class="form-check">
+            <input class="form-check-input " type="radio" id="engineer" name="engineer" value="engineer">
+            <label class="form-check-label" for="engineer">工程師</label>
+          </div>
+        </div>
+      </div>
+      <div class="card col m-3 border">
+        <img class="card-img-top mt-2"
+          src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" height="240"
+          alt="design">
+        <div class="card-body row justify-content-center">
+          <div class="form-check">
+            <input class="form-check-input " type="radio" id="design" name="design" value="design">
+            <label class="form-check-label" for="design">設計師</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="card col m-3 border">
+        <img class="card-img-top mt-2"
+          src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" height="240"
+          alt="innovator">
+        <div class="card-body row justify-content-center">
+          <div class="form-check">
+            <input class="form-check-input " type="radio" id="innovator" name="innovator" value="innovator">
+            <label class="form-check-label" for="innovator">創業家</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row m-5 justify-content-center">
+      <div class="mr-2">
+        <button type="submit" class="btn btn-primary">產生幹話</button>
+      </div>
+      <div class="col-10 border">
+        <div class="alert" role="alert">
+          {{#if trashWords}}
+          <code>{{trashWords}}</code>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>
